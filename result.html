@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <title>適職診断結果</title>
+</head>
+<body>
+    <div class="container">
+    <h1>ゆるっと職業診断結果ページ</h1>
+    <div id="result" style="display:none;"><!--#result：診断結果を表示する部分で最初は非表示(display:none)-->
+        <h2>診断結果</h2>
+        <p id="top-result"></p>
+        <h3>上位3位:</h3>
+        <ol id="top-three"></ol>
+    </div>
+    <button id="retry">もう一度診断する</button><!--#retry：押すとトップページに戻って再診断-->
+    <button id="close">閉じる（サーバー停止）</button><!--#close：押すとサーバーに停止リクエストを送り、診断を終了-->
+    </div>
+    <script>//このHTMLだけに必要な短いスクリプト(後から追加したというのもある)
+        document.getElementById('retry').addEventListener('click', function() {
+            location.href = '/';  //クリックしたらトップページに戻る命令
+        });
+
+        document.getElementById('close').addEventListener('click', function() {
+            fetch('/shutdown').then(() => {//fetch('/shutdown')でPython側のサーバーに停止の指示を送る
+                alert('サーバーを停止しました。ブラウザを閉じてください。');
+            });
+        });
+
+        // サーバーから結果を取得
+fetch('/result')//サーバー(Python側)から/resultにアクセスしてデータ(JSON形式)を取得
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('top-result').textContent =
+            `あなたに最も適しているのは『${data.top_job}』です！（スコア: ${data.top_score}）`;
+            //data.top_jobやdata.top_threeを使って結果を画面に表示
+
+        const topThreeList = document.getElementById('top-three');
+        topThreeList.innerHTML = '';
+        data.top_three.forEach((entry, idx) => {
+            const li = document.createElement('li');
+            li.textContent = `${idx + 1}位: ${entry.job}（スコア: ${entry.score}）`;
+            topThreeList.appendChild(li);
+        });
+
+        // 結果部分を表示
+        document.getElementById('result').style.display = 'block';//#resultをdisplay:blockにして、非表示→表示
+    })
+    .catch(error => {
+        console.error("結果の取得に失敗しました:", error);
+    });
+    </script>
+</body>
+</html>

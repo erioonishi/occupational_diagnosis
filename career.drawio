@@ -1,0 +1,828 @@
+<mxfile host="65bd71144e">
+    <diagram id="cQ8cTS1h_3VG7qRFBNr-" name="要件定義">
+        <mxGraphModel dx="1071" dy="563" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1150" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="bZO9j3ZSm6xA9X-gK8Z0-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;ゆるっと職業診断&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="bZO9j3ZSm6xA9X-gK8Z0-2" value="要件定義" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="50" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="bZO9j3ZSm6xA9X-gK8Z0-5" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;1. 概要&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;line-height: 130%;&quot;&gt;&lt;strong data-end=&quot;100&quot; data-start=&quot;94&quot;&gt;目的&lt;/strong&gt;：&lt;br data-end=&quot;104&quot; data-start=&quot;101&quot;&gt;ユーザーがいくつかの質問に回答することで、自分に合った職業を知るための診断Webアプリを制作。&lt;br data-end=&quot;156&quot; data-start=&quot;153&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;楽しく直感的に使えるUI(&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;画面デザイン)&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;と、診断結果に基づく簡易レコメンド(推薦)を特徴とする。&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;strong data-end=&quot;204&quot; data-start=&quot;194&quot;&gt;対象ユーザー&lt;/strong&gt;：&lt;br data-end=&quot;208&quot; data-start=&quot;205&quot;&gt;職業に迷っている学生や転職希望者、自己分析をしたい人など。&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="126" width="570" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-1" value="&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px; line-height: 140%;&quot;&gt;&lt;b&gt;2. 機能要件&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;&lt;b&gt;2.1質問機能&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;・複数の選択式質問&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;・各選択肢が職業に対してスコアを加算する&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;・回答選択後「次へ」ボタンで次の質問に遷移&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;・全問回答後に結果ページに遷移&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;&lt;b&gt;2.2スコア計算機能&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;・各職業に対してスコアを加算&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;・スコアの高い順に並べ、上位3件を抽出&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;&lt;b&gt;2.3結果表示機能&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;・最適職業1位をメイン表示&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;・上位3位までの職業をリスト表示&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;・スコア付きで表示&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;&lt;b&gt;2.4再診断・サーバー停止機能&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;・「もう一度診断する」ボタンでトップページへ戻る&lt;/div&gt;&lt;div style=&quot;text-align: left; line-height: 140%;&quot;&gt;・&lt;span style=&quot;background-color: transparent; text-align: center;&quot;&gt;「閉じる」ボタンを押すと、アプリが安全に終了するようにサーバーへ終了リクエスト(/&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;shutdown)s&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center;&quot;&gt;を送信&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="237" width="600" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-2" value="&lt;b style=&quot;line-height: 140%;&quot;&gt;&lt;font style=&quot;font-size: 14px; line-height: 140%;&quot;&gt;3. 非機能要件&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;&lt;b&gt;3.1デザイン/UI&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・フォント：Google Fonts「Yomogi」&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・カラートーン：やわらかいパステル調(背景：水色、ボタン：ピンク系)&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;&lt;b&gt;3.2パフォーマンス&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・ローカル環境で即時レスポンス&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・軽量なJSON処理とシンプルなUIで高速表示&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;&lt;b&gt;3.3保守性(変更/追加/修正など)&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・HTML / CSS / JavaScriptは分離(各要素の役割を明確にし、修正や拡張を容易)&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・&lt;span style=&quot;background-color: transparent;&quot;&gt;質問はJSONファイルで管理(questions.&lt;/span&gt;&lt;span&gt;json)(アプリ本体のコードに手を加えることなく、質問の更新が可能)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;&lt;span style=&quot;background-color: rgba(255, 255, 255, 0.1);&quot;&gt;・&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;サーバーはPythonの&lt;/span&gt;&lt;span&gt;http.server&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;ベースでシンプル構成(&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;外部ライブラリや複雑なフレームワークを不使用&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="535" width="620" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-3" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;4. システム構成&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="31" y="744" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-8" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="EY3H0ChWboeXkE1S8FYa-4" target="EY3H0ChWboeXkE1S8FYa-5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-4" value="ユーザー(ブラウザ)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="774" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-10" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="EY3H0ChWboeXkE1S8FYa-5" target="EY3H0ChWboeXkE1S8FYa-6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-11" value="(POST)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="EY3H0ChWboeXkE1S8FYa-10" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2081" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-17" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="EY3H0ChWboeXkE1S8FYa-5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="834" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-5" value="index.html" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="825" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-6" value="/submit_result (Pythonサーバーが処理)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="874" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-7" value="result.html → /result (GET)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="924" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-9" value="script.js (質問進行・スコア計算)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="823" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-15" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.378;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="EY3H0ChWboeXkE1S8FYa-6" target="EY3H0ChWboeXkE1S8FYa-7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="EY3H0ChWboeXkE1S8FYa-16" value="(遷移)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="EY3H0ChWboeXkE1S8FYa-15" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1456" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="07nr75lQfhL9B-UxC7QG-1" value="&lt;b style=&quot;line-height: 140%;&quot;&gt;&lt;font style=&quot;font-size: 14px; line-height: 140%;&quot;&gt;5.使用技術&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・フロントエンド：HTML, CSS, JavaScript&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・&lt;span style=&quot;background-color: transparent;&quot;&gt;サーバーは Python 標準ライブラリの&lt;/span&gt;&lt;span style=&quot;font-family: var(--monaco-monospace-font);&quot;&gt;http.server.SimpleHTTPRequestHandlerとsocketserver.TCPServer&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;・データ形式：JSON&lt;/span&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="972" width="590" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="e9LWCJQTmQ3en63Z13YL-3" value="&lt;span style=&quot;font-size: 13px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;/submit resultの役割&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp;①診断アプリ(js側)が診断結果を生成する&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp;②fetch(&quot;/submit_result&quot;,{method:&quot;POST&quot;,body:JSON.stringify(…)})でサーバーに送信&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp;③ブラウザから/submit resultにPOSTでJSONが送られてくる&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp;④Pythonサーバー側がそれを受け取り、resurt_dataに保存&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp;⑤サーバーはクライアントに{&quot;status&quot;:&quot;OK&quot;}というJSONレスポンスを返す&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp;⑥後で/resultにアクセスすると、保存された診断結果がJSON形式で取得できる&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="860" width="510" height="120" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="dZwztgbA6-XGat0bkP8F" name="設計図">
+        <mxGraphModel dx="1071" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1500" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;ゆるっと職業診断&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="全体の構成" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="135" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="設計図" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="50" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="ユーザーのブラウザ" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="27" y="198" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="index.html(質問ページ)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="67" y="228" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="script.js(質問の制御・結果計算)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="111" y="258" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="style.css(見た目のデザイン)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="112" y="288" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="result.html(診断結果)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="71" y="318" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="とじるボタン(/shutdownにリクエスト→サーバー切断リクエスト)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="109" y="346" width="370" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="questions.json(質問データ)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="67" y="375" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="ローカルサーバー(sever.py)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="27" y="412" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="SimpleHTTPServerでHTML/CSS/JS/JSONを配信" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="67" y="442" width="290" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;/shutdownリクエストでサーバー終了&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="71" y="471" width="220" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="endArrow=none;html=1;entryX=0.254;entryY=0.733;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="5" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="393" as="sourcePoint"/>
+                        <mxPoint x="60" y="242" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="242.75" as="sourcePoint"/>
+                        <mxPoint x="75" y="243" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="332.75" as="sourcePoint"/>
+                        <mxPoint x="75" y="333" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="392.75" as="sourcePoint"/>
+                        <mxPoint x="75" y="393" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="90" y="275" as="sourcePoint"/>
+                        <mxPoint x="110" y="275" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="487" as="sourcePoint"/>
+                        <mxPoint x="60" y="440" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="60" y="473.3"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="" style="endArrow=none;html=1;jumpSize=6;spacing=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="90" y="304" as="sourcePoint"/>
+                        <mxPoint x="89.66" y="251" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="90" y="304" as="sourcePoint"/>
+                        <mxPoint x="110" y="304" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="" style="endArrow=none;html=1;entryX=0.003;entryY=0.465;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="89.94" y="361.02" as="sourcePoint"/>
+                        <mxPoint x="110.04999999999998" y="360.96999999999997" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="90" y="361" as="sourcePoint"/>
+                        <mxPoint x="90" y="342" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="456.75" as="sourcePoint"/>
+                        <mxPoint x="75" y="457" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="60" y="486.75" as="sourcePoint"/>
+                        <mxPoint x="75" y="487" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="ファイル構成の役割" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="544" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=none;html=1;" parent="1" source="36" target="37" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="index.html" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="27" y="610" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;アプリのメイン画面、質問表示、診断の流れを持つページ。&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="186" y="611" width="350" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="style.css" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="28" y="639" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="全体のレイアウト、ボタン・テキストのデザインスタイル設定。" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="189" y="640" width="370" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" style="edgeStyle=none;html=1;" parent="1" source="39" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="188" y="654" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="44" style="edgeStyle=none;html=1;" parent="1" source="42" target="43" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="script.js" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="669" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="質問の順番管理、ユーザーの選択処理、スコア計算、結果表示処理。（動き・計算・ユーザー操作の処理係）" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="184" y="670" width="610" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" style="edgeStyle=none;html=1;" parent="1" source="45" target="46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="questions.json" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="28" y="700" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="診断に使う質問内容と各選択肢の職業スコア影響データ。" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="185" y="701" width="340" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" style="edgeStyle=none;html=1;" parent="1" source="48" target="49" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="result.html" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="27" y="730" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="結果表示用の別ページ（再診断・サーバー終了ボタン付き）。" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="189" y="729" width="350" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" style="edgeStyle=none;html=1;" parent="1" source="51" target="52" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="server.py" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="29" y="759" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="簡易HTTPサーバー、HTML / CSS / JS / JSONファイル配信・/shutdown受付・サーバー終了管理。" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="759" width="550" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="質問のスコアの計算フロー" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="840" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="55" target="56" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="質問のスコア計算フロー" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="182" y="917" width="170" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="質問データ読み込む" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="197" y="990" width="140" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="質問データからscoreを生成し初期化" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="145.5" y="1060" width="233" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="58" target="59" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="質問" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="216" y="1130" width="102" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="59" target="60" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="残っていなければshowResult()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="70" vertex="1" connectable="0">
+                    <mxGeometry x="-0.0292" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="59" value="質問が残ってる？" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="167" y="1200" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="60" target="61" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="&lt;div style=&quot;line-height: 150%;&quot;&gt;ユーザーの回答を取得&lt;div&gt;各職業にスコアを加算&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="150.5" y="1327" width="233" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="scoreの高い順に結果を表示" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="1437" width="233" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" style="edgeStyle=none;html=1;entryX=0.523;entryY=0.037;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="56" target="57" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.449;entryY=0.003;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="268.1" y="1093.0000000000002" as="sourcePoint"/>
+                        <mxPoint x="267.898" y="1130.099" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="69" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.006;entryY=0.599;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="59" target="58" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="122" y="1235"/>
+                            <mxPoint x="122" y="1150"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="73" value="質問が残っていれば &lt;span&gt;showQuestion()&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" parent="69" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2268" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="72" value="&lt;div style=&quot;line-height: 150%;&quot;&gt;&lt;span style=&quot;background-color: rgba(255, 255, 255, 0.1);&quot;&gt;script.jsの中の&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;質問が残っているかどうかの記述&lt;/span&gt;&lt;/div&gt;&lt;span&gt;if(currentQuestion&amp;lt;question.length)&lt;/span&gt;：&lt;br&gt;&amp;nbsp;&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;question.length&lt;/span&gt;は全質問数を表して&lt;br&gt;&lt;div style=&quot;line-height: 150%;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;currentQuestion&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;がこれより小さい間は次の質問があると判断&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="384" y="1168" width="350" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="cMOk0gc9V4UuZtD7OkRb-74" value="（ファイルを渡す &amp;amp; 結果を受け取り返す「司令塔」）" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="179" y="780" width="310" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="3UEH2DcqLnKj_v7XcsiA" name="質問について">
+        <mxGraphModel dx="1071" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1500" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="mWL2njtki1PToFzOmcFJ-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;ゆるっと職業診断&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="mWL2njtki1PToFzOmcFJ-2" value="質問について" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="50" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mWL2njtki1PToFzOmcFJ-3" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;⓵質問数10問&lt;/font&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;⓶職業数48個&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;となっていますが内容も数もJSONファイルの書き換えで簡単にできます&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="125" width="670" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="mWL2njtki1PToFzOmcFJ-5" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;職業一覧 + 必要スキル（今回入っている職業）&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="210" width="320" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="mWL2njtki1PToFzOmcFJ-6" value="&lt;b style=&quot;line-height: 140%;&quot;&gt;&lt;font style=&quot;line-height: 140%;&quot;&gt;クリエイティブ系&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・デザイナー → デザインセンス、Photoshop/Illustrator、色彩感覚、プレゼン力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・小説家 → 創作力、文章力、構成力、読解力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・ゲームクリエイター → ゲーム企画力、プログラミング、グラフィック知識、ユーザー理解&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・イラストレーター → デッサン力、デジタルツール、色彩感覚、独自のスタイル&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・漫画家 → 作画力、ストーリー構成、キャラクターデザイン、締切管理&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・動画クリエイター → 動画編集スキル、企画力、撮影技術、SNS活用&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・Webデザイナー → HTML/CSS、UI/UX知識、デザインツール、SEO理解&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・YouTuber → 企画力、動画編集、トーク力、マーケティング理解&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・プロゲーマー → 高いゲームスキル、反射神経、戦略思考、忍耐力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・俳優 → 表現力、演技力、台本理解、柔軟な対応力&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="245" width="560" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="mWL2njtki1PToFzOmcFJ-7" value="&lt;b style=&quot;line-height: 140%;&quot;&gt;&lt;font style=&quot;line-height: 140%;&quot;&gt;技術・分析系&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・エンジニア → プログラミング、問題解決力、論理的思考、チーム開発経験&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・データサイエンティスト → 統計知識、データ分析、Python/R、論理的思考&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・AIエンジニア → 機械学習知識、Python、数学知識、最新論文理解&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・セキュリティエンジニア → ネットワーク知識、セキュリティ対策、脆弱性診断、監視スキル&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・プログラマー → コーディング力、デバッグ力、アルゴリズム知識、継続力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・システムエンジニア → 要件定義、設計力、システム構築、顧客対応力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・データアナリスト → データ処理スキル、Excel、SQL、可視化力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・研究者 → 探究心、論文執筆、分析スキル、プレゼン力&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="466" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="mWL2njtki1PToFzOmcFJ-8" value="&lt;b style=&quot;line-height: 140%;&quot;&gt;&lt;font style=&quot;line-height: 140%;&quot;&gt;人と関わる系&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・教師 → 教育力、コミュニケーション、忍耐力、指導力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・看護師 → 医療知識、対人スキル、判断力、チームワーク&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・営業 → コミュニケーション力、提案力、交渉力、忍耐力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・コンサルタント → 課題解決力、分析力、プレゼン力、提案力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・カスタマーサポート → 共感力、傾聴力、課題解決力、忍耐力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・SNSマーケター → トレンド把握、SNS運用、企画力、分析力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・イベントプランナー → 企画力、調整力、交渉力、当日対応力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・ツアーガイド → 地域知識、説明力、語学力（場合による）、臨機応変さ&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・広報 → 発信力、文章力、企画力、メディア対応力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・人事 → 採用スキル、面接力、評価スキル、調整力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・カウンセラー → 傾聴力、共感力、心理知識、倫理観&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・保育士 → 子供対応力、遊び企画、安全管理、保護者対応&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・福祉士 → 福祉知識、相談力、記録管理、忍耐力&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="645" width="450" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="mWL2njtki1PToFzOmcFJ-9" value="&lt;b&gt;&lt;font&gt;ビジネス・企画系&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・インフルエンサー → SNS運用、発信力、ブランディング、分析力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・起業家 → ビジネス企画、資金調達、リーダーシップ、柔軟な対応力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・ベンチャー企業経営者 → 経営力、資金管理、チームマネジメント、企画力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・プロジェクトマネージャー → 計画力、進行管理、リーダーシップ、課題解決力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・マーケター → 市場分析、企画力、広告戦略、データ分析&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="923" width="500" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="mWL2njtki1PToFzOmcFJ-10" value="&lt;b&gt;&lt;font&gt;公共・作業系&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・公務員 → 法律知識、事務処理力、協調性、安定志向&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・軽作業 → 作業スピード、正確性、忍耐力、体力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・農家 → 農業知識、体力、季節管理、計画力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・漁師 → 漁業知識、体力、チームワーク、危機対応力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・林業作業員 → 森林知識、体力、危険管理、環境保護意識&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・地域おこし協力隊 → 地域理解、企画力、コミュニケーション、柔軟さ&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・環境保護活動家 → 環境知識、行動力、広報力、情熱&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="1050" width="450" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="ULVdd5KJ3Hek81cBProU-1" value="&lt;b&gt;スポーツ・アウトドア系&lt;/b&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・トレーナー → 体力、トレーニング知識、モチベーション管理、指導力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・シェフ → 調理技術、創作力、衛生管理、チームワーク&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・アウトドアインストラクター → アウトドア技術、安全管理、指導力、環境知識&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・スポーツトレーナー → スポーツ知識、体力、リハビリ知識、メンタルサポート力&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;・登山ガイド → 登山技術、安全管理、応急処置力、説明力&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="1215" width="510" height="120" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="dri3tHI-dR40g67_Ck-2" name="クラス図">
+        <mxGraphModel dx="1785" dy="938" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="Q1RenIrlrUEMS3anASmI-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;ゆるっと職業診断&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="Q1RenIrlrUEMS3anASmI-2" value="クラス図" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="50" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---2" value="server.py&amp;nbsp;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="445" y="325" width="140" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---3" value="- result_data: dict" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---2">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---6" value="- httpd&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---2">
+                    <mxGeometry y="60" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---4" value="+ MyHandler:&lt;div style=&quot;line-height: 200%;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- do_GET(self)&lt;/div&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;- do_POST(self)&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---2">
+                    <mxGeometry y="90" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---5" value="+ shutdown_server()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---2">
+                    <mxGeometry y="170" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---7" value="+ run_server()&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---2">
+                    <mxGeometry y="200" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---8" value="index.html" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="139" y="142" width="140" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---9" value="- #question-text: &amp;lt;p&amp;gt;&amp;nbsp;&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---8">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---10" value="- #choices: &amp;lt;div&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---8">
+                    <mxGeometry y="60" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---11" value="- #next-btn: &amp;lt;button&amp;gt;&amp;nbsp;&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---8">
+                    <mxGeometry y="90" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---12" value="- #result: &lt;div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---8">
+                    <mxGeometry y="120" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---13" value="result.html" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="139" y="628" width="140" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---14" value="- #result: &amp;lt;div&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---13">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---15" value="- #top-result: &amp;lt;p&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---13">
+                    <mxGeometry y="60" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---16" value="- #top-three: &amp;lt;ol&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---13">
+                    <mxGeometry y="90" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---18" value="- #retry:&amp;lt;button&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---13">
+                    <mxGeometry y="120" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---19" value="- #close: &amp;lt;button&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---13">
+                    <mxGeometry y="150" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---20" value="script.js" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="123" y="333" width="170" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---21" value="- questions: array" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---20">
+                    <mxGeometry y="30" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---22" value="- currentQuestion: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---20">
+                    <mxGeometry y="60" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---25" value="+ initScores()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---20">
+                    <mxGeometry y="90" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---24" value="+ showQuestion()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---20">
+                    <mxGeometry y="120" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---26" value="+ selectChoice(btn, choice)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---20">
+                    <mxGeometry y="150" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---27" value="+ showResult()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---20">
+                    <mxGeometry y="180" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---28" value="result.html内の&amp;lt;script&amp;gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="74" y="870" width="270" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---29" value="- fetch(&#39;/result&#39;)でserver.pyのresult_dataを取得" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---28">
+                    <mxGeometry y="30" width="270" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---30" value="- retryボタンでトップへ遷移" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---28">
+                    <mxGeometry y="60" width="270" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---31" value="- closeボタンでfetch(&#39;/shutdown&#39;)送信" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="XaAeW3wpUUSRIwgJ6b---28">
+                    <mxGeometry y="90" width="270" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---36" value="questions.json" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="139" y="580" width="120" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---39" style="edgeStyle=none;html=1;entryX=0.497;entryY=0.987;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="XaAeW3wpUUSRIwgJ6b---20" target="XaAeW3wpUUSRIwgJ6b---12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-1" value="script.js は index.html に読み込まれて実行される" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XaAeW3wpUUSRIwgJ6b---39">
+                    <mxGeometry x="-0.0174" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---40" style="edgeStyle=none;html=1;entryX=0.486;entryY=0;entryDx=0;entryDy=0;exitX=0.437;exitY=1.107;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="XaAeW3wpUUSRIwgJ6b---27" target="XaAeW3wpUUSRIwgJ6b---36">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="121" y="365" as="sourcePoint"/>
+                        <mxPoint x="95" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-2" value="データ読み込み" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XaAeW3wpUUSRIwgJ6b---40">
+                    <mxGeometry x="-0.1087" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-2" y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---41" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.554;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="XaAeW3wpUUSRIwgJ6b---10" target="XaAeW3wpUUSRIwgJ6b---2">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="523" y="217"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-5" value="診断結果取得リクエスト" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XaAeW3wpUUSRIwgJ6b---41">
+                    <mxGeometry x="0.4122" y="1" relative="1" as="geometry">
+                        <mxPoint x="-1" y="44" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---42" style="edgeStyle=none;html=1;entryX=0.015;entryY=0.311;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="XaAeW3wpUUSRIwgJ6b---25" target="XaAeW3wpUUSRIwgJ6b---4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-3" value="script.js が診断結果を&lt;div&gt;サーバーにPOST送信&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XaAeW3wpUUSRIwgJ6b---42">
+                    <mxGeometry x="-0.0883" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XaAeW3wpUUSRIwgJ6b---43" style="edgeStyle=none;html=1;entryX=0.523;entryY=0.952;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="XaAeW3wpUUSRIwgJ6b---13" target="XaAeW3wpUUSRIwgJ6b---7">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="518" y="718"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-4" value="診断結果取得リクエスト" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XaAeW3wpUUSRIwgJ6b---43">
+                    <mxGeometry x="0.4014" y="2" relative="1" as="geometry">
+                        <mxPoint y="-40" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-8" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.067;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="XaAeW3wpUUSRIwgJ6b---28" target="XaAeW3wpUUSRIwgJ6b---19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-9" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;server.py から結果取得 → 画面に結果表示&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="2lkttQ9m3XwCwxW34rpE-8">
+                    <mxGeometry x="-0.0201" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-10" value="&lt;font style=&quot;font-size: 11px; color: rgb(153, 76, 0);&quot;&gt;保存された診断結果&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="357" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-11" value="&lt;font style=&quot;font-size: 11px; color: rgb(153, 76, 0);&quot;&gt;サーバーインスタンス&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="389" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-12" value="&lt;font style=&quot;font-size: 11px; color: rgb(153, 76, 0);&quot;&gt;HTTPリクエスト処理クラス&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="422" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-20" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.893;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#994C00;" edge="1" parent="1" source="2lkttQ9m3XwCwxW34rpE-14" target="XaAeW3wpUUSRIwgJ6b---5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-14" value="&lt;font style=&quot;font-size: 11px; color: rgb(153, 76, 0);&quot;&gt;サーバー停止処理&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="500" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-16" value="&lt;font style=&quot;font-size: 11px; color: rgb(153, 76, 0);&quot;&gt;サーバー起動処理&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="530" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-17" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.821;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#994C00;" edge="1" parent="1" source="2lkttQ9m3XwCwxW34rpE-10" target="XaAeW3wpUUSRIwgJ6b---3">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="550" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-18" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.393;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#994C00;" edge="1" parent="1" source="2lkttQ9m3XwCwxW34rpE-11" target="XaAeW3wpUUSRIwgJ6b---6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-19" style="edgeStyle=none;html=1;entryX=0.679;entryY=0.188;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#994C00;" edge="1" parent="1" source="2lkttQ9m3XwCwxW34rpE-12" target="XaAeW3wpUUSRIwgJ6b---4">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="510" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2lkttQ9m3XwCwxW34rpE-21" style="edgeStyle=none;html=1;entryX=0.679;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#994C00;" edge="1" parent="1" source="2lkttQ9m3XwCwxW34rpE-16" target="XaAeW3wpUUSRIwgJ6b---7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="e9UfKVYtJ56i4fCh6_Ke" name="シーケンス図">
+        <mxGraphModel dx="1071" dy="563" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1150" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;ゆるっと職業診断&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-2" value="シーケンス図" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="50" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-3" value="ユーザー" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-4" value="ブラウザ&lt;div&gt;HTML/CSS/JS&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-5" value="サーバー&lt;div&gt;server.py&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-6" value="質問データ&lt;div&gt;questions.json&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-10" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="100" y="990" as="sourcePoint"/>
+                        <mxPoint x="99.41000000000003" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-11" value="" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="TNyTg-D2_XzFOu6wyINM-20" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="300.3" y="1494.7058823529412" as="sourcePoint"/>
+                        <mxPoint x="299.71000000000004" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-12" value="" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="TNyTg-D2_XzFOu6wyINM-21" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="499.88" y="1494.7058823529412" as="sourcePoint"/>
+                        <mxPoint x="499.2900000000001" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-13" value="" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="TNyTg-D2_XzFOu6wyINM-22" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="700.25" y="1494.7058823529412" as="sourcePoint"/>
+                        <mxPoint x="699.6600000000001" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-14" value="1⃣ アクセス" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="225" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-15" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="100" y="287" as="sourcePoint"/>
+                        <mxPoint x="300" y="287" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-16" value="URL入力&lt;div&gt;(ブラウザにアクセス)&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XiNDMeRwO2lxvuSaxq69-15" vertex="1" connectable="0">
+                    <mxGeometry x="-0.15" y="-1" relative="1" as="geometry">
+                        <mxPoint x="12" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-17" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="300" y="310" as="sourcePoint"/>
+                        <mxPoint x="500" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-18" value="&amp;nbsp;GET / index.html&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XiNDMeRwO2lxvuSaxq69-17" vertex="1" connectable="0">
+                    <mxGeometry x="-0.02" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-1" y="-2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-19" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="499" y="343" as="sourcePoint"/>
+                        <mxPoint x="300" y="343" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-20" value="&amp;nbsp;index.html&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XiNDMeRwO2lxvuSaxq69-19" vertex="1" connectable="0">
+                    <mxGeometry x="-0.15" y="4" relative="1" as="geometry">
+                        <mxPoint x="-17" y="-5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-21" value="&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;サーバーがindex.htmlを探して返す&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="329" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-22" value="2⃣ スクリプト起動" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="359" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-23" value="&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;js起動&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="359" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-24" value="fetch question.json" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="302" y="378" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-25" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="300" y="420" as="sourcePoint"/>
+                        <mxPoint x="500" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-26" value="&amp;nbsp;GET / questions.json&lt;span style=&quot;font-family: monospace; font-size: 0px; text-align: start; background-color: rgb(251, 251, 251);&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22endArrow%3Dclassic%3Bhtml%3D1%3B%22%20edge%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20width%3D%2250%22%20height%3D%2250%22%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22300%22%20y%3D%22310%22%20as%3D%22sourcePoint%22%2F%3E%3CmxPoint%20x%3D%22500%22%20y%3D%22310%22%20as%3D%22targetPoint%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20value%3D%22%26amp%3Bnbsp%3BGET%20%2F%20index.html%26amp%3Bnbsp%3B%22%20style%3D%22edgeLabel%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3B%22%20vertex%3D%221%22%20connectable%3D%220%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22-0.02%22%20y%3D%22-1%22%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22-1%22%20y%3D%22-2%22%20as%3D%22offset%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XiNDMeRwO2lxvuSaxq69-25" vertex="1" connectable="0">
+                    <mxGeometry x="-0.02" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-1" y="-2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-27" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="500" y="439" as="sourcePoint"/>
+                        <mxPoint x="700" y="439" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-28" value="&amp;nbsp;(ファイル読み込み)&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XiNDMeRwO2lxvuSaxq69-27" vertex="1" connectable="0">
+                    <mxGeometry x="-0.02" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-1" y="-2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-29" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="699" y="472" as="sourcePoint"/>
+                        <mxPoint x="500" y="472" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-30" value="&amp;nbsp;questions.jsonデータ内容&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XiNDMeRwO2lxvuSaxq69-29" vertex="1" connectable="0">
+                    <mxGeometry x="-0.15" y="4" relative="1" as="geometry">
+                        <mxPoint x="-17" y="-5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-31" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="499" y="500" as="sourcePoint"/>
+                        <mxPoint x="300" y="500" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-32" value="&amp;nbsp;questions.jsonデータ送信&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XiNDMeRwO2lxvuSaxq69-31" vertex="1" connectable="0">
+                    <mxGeometry x="-0.15" y="4" relative="1" as="geometry">
+                        <mxPoint x="-17" y="-5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-33" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="300" y="510" as="sourcePoint"/>
+                        <mxPoint x="100" y="510" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-34" value="3⃣ 質問表示" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="520" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-35" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="100" y="580" as="sourcePoint"/>
+                        <mxPoint x="300" y="580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-36" value="&amp;nbsp;(選択肢クリック)&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XiNDMeRwO2lxvuSaxq69-35" vertex="1" connectable="0">
+                    <mxGeometry x="-0.02" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-1" y="-2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-37" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="100" y="610" as="sourcePoint"/>
+                        <mxPoint x="300" y="610" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-38" value="&amp;nbsp;(次へボタン)&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XiNDMeRwO2lxvuSaxq69-37" vertex="1" connectable="0">
+                    <mxGeometry x="-0.02" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-1" y="-2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-39" value="&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;繰り返し質問表示・選択&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="297" y="596" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-40" value="4⃣ 全質問終了" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="640" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-41" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="299" y="694" as="sourcePoint"/>
+                        <mxPoint x="100" y="694" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="XiNDMeRwO2lxvuSaxq69-42" value="&amp;nbsp;計算結果表示&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XiNDMeRwO2lxvuSaxq69-41" vertex="1" connectable="0">
+                    <mxGeometry x="-0.15" y="4" relative="1" as="geometry">
+                        <mxPoint x="-17" y="-5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-1" value="&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;jsが計算&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;HTML,jsで書き換える&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="299" y="673" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-4" value="&amp;nbsp;5⃣ 結果ページへ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="730" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-5" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="100" y="779" as="sourcePoint"/>
+                        <mxPoint x="300" y="779" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-6" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="300" y="790" as="sourcePoint"/>
+                        <mxPoint x="500" y="790" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-7" value="&amp;nbsp;GET / result.html&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="TNyTg-D2_XzFOu6wyINM-6" vertex="1" connectable="0">
+                    <mxGeometry x="-0.02" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-1" y="-2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-8" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="499" y="823" as="sourcePoint"/>
+                        <mxPoint x="300" y="823" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-9" value="&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;result&lt;/span&gt;.html&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="TNyTg-D2_XzFOu6wyINM-8" vertex="1" connectable="0">
+                    <mxGeometry x="-0.15" y="4" relative="1" as="geometry">
+                        <mxPoint x="-17" y="-5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-10" value="6⃣ 閉じるボタン" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="810" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-11" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="100" y="859" as="sourcePoint"/>
+                        <mxPoint x="300" y="859" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-12" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="300" y="872" as="sourcePoint"/>
+                        <mxPoint x="500" y="872" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-13" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;GET /&lt;/span&gt;shutdown&amp;nbsp;&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="TNyTg-D2_XzFOu6wyINM-12" vertex="1" connectable="0">
+                    <mxGeometry x="-0.02" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-1" y="-2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-14" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="499" y="905" as="sourcePoint"/>
+                        <mxPoint x="300" y="905" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-15" value="&amp;nbsp;shutdown&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="TNyTg-D2_XzFOu6wyINM-14" vertex="1" connectable="0">
+                    <mxGeometry x="-0.15" y="4" relative="1" as="geometry">
+                        <mxPoint x="-17" y="-5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-18" value="&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;サーバー終了&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="910" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-19" value="ユーザー" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="970" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-20" value="ブラウザ&lt;div&gt;HTML/CSS/JS&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="970" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-21" value="サーバー&lt;div&gt;server.py&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="970" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-22" value="質問データ&lt;div&gt;questions.json&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="970" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TNyTg-D2_XzFOu6wyINM-23" value="&lt;font&gt;&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;・質問データの取得→サーバー&lt;/font&gt;&lt;span style=&quot;background-color: transparent; line-height: 140%;&quot;&gt;&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;(questions.json送る)&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;&lt;font&gt;&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;・質問の表示,回答の受け取り→ブラウザ&lt;/font&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;(js+HTML)&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;・スコアの計算・集計→ブラウザ(js)&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 140%;&quot;&gt;&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;・結果の表示→ブラウザ(jsが画面書き換え)&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="530" width="290" height="110" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

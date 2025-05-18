@@ -1,0 +1,59 @@
+body {
+    font-family: 'Yomogi', cursive;
+    background: #d5e4f3;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {/* コンテンツ */
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#retry,#close,#next-btn {/* ボタン（診断結果の再チャレンジ・終了・次へ）*/
+    font-family: 'Yomogi', cursive;
+    padding: 12px 24px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #fcaeba; /* ピンク色 */
+    color: white;
+    border: none;
+    border-radius: 25px; /* 丸みを帯びた形 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ふんわり影 */
+    transition: all 0.3s ease;
+    
+}
+
+#retry:hover,#close:hover,#next-btn:hover {
+    background-color: #ff9898; /* ホバー時は濃いピンク */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px); /* 少し浮かせる */
+}
+
+.choice-btn {/* 選択肢ボタン（質問に対する回答）*/
+    font-family: 'Yomogi', cursive;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+    cursor: pointer;
+    background: #bae4f1;
+    border: none;
+    border-radius: 8px;
+}
+
+.choice-btn.selected {/* 選ばれた時のスタイル */
+    background: #36afd4;
+    color: #fff;
+}
+
+#top-three{/* ランキング表示のリスト（番号なし） */
+    list-style: none;
+}
