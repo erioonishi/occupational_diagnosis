@@ -54,7 +54,6 @@ oshigoto_shindan/
 
 ## 📂 設計図（PDF）Web上での確認のため
 
-- （今回は画面遷移図のみ）
 - [PDFはこちらから見られます 📄](assets/images/oshigoto.drawio.pdf)
 
 ## 💡 今後のアイデア
