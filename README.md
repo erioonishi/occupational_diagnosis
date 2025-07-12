@@ -29,7 +29,7 @@
 
 1. **リポジトリをクローン**
    ```bash
-   git clone https://github.com/erioonishi/oshigoto_sindan.git
+   git clone https://github.com/erioonishi/occupational_diagnosis.git
 2. **server.py を実行**
    ```bash
    python server.py
